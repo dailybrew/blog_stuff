@@ -16,9 +16,13 @@ if [ "$(ls -A $1)" ]; then
 	do
 		## -- here -- > 
 		cd $BLOG_PATH
-		hexo new $post
-		mv $PENDING/$post $PUBLISHED/$post
+		hexo new $post && mv $PENDING/$post $PUBLISHED/$post
 	done
 else 
     echo "Nothing to publish"
 fi
+
+
+
+
+
